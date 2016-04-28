@@ -7,34 +7,45 @@
   <style type="text/css">
     html {
       font-size: 62.5%;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 10% 0 0;
+      margin: 0;
       padding: 0;
       font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
       font-size: 1.6em;
       font-weight: 300;
       letter-spacing: .01em;
       line-height: 1.6;
-      background: #fff;
+      background: #131310;
+      color: #fff;
     }
 
     .container {
       max-width: 80%;
-      margin: 0 auto;
+      margin: 15% auto 0;
       text-align: center;
+    }
+    
+    .logo {
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      top: 30px;
+      left: 30px;
     }
 
     .logo img {
-      max-width: 368px;
-      width: 100%;
+      width: 200px;
     }
 
     h1 {
-      font-size: 3rem;
+      font-size: 4rem;
       font-weight: normal;
       letter-spacing: -0.1rem;
+      color: #fff;
     }
 
     .phone {
@@ -42,7 +53,7 @@
     }
 
     .job {
-      margin: 4rem 0;
+      margin: 5rem 0 8rem;
     }
 
     .job a {
@@ -52,21 +63,64 @@
       color: #fff;
       cursor: pointer;
       display: inline-block;
-      font-size: 1.1rem;
-      font-weight: 700;
-      height: 3.8rem;
+      font-size: 2rem;
+      font-weight: normal;
+      height: 4rem;
       letter-spacing: .1rem;
-      line-height: 3.8rem;
-      padding: 0 3rem;
+      line-height: 4rem;
+      padding: 0.5rem 3rem;
       text-align: center;
       text-decoration: none;
       text-transform: uppercase;
       white-space: nowrap;
       box-shadow: 0 4px 5px rgba(0, 0, 0, .3);
     }
+    
+    .job a:hover {
+      background-color: #f60;
+      border-color: #f60;
+    }
 
     .copyright {
       font-size: 1.1rem;
+    }
+    
+    .address a {
+      color: #fc7820;
+    }
+    
+    .fullscreen-bg {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
+      z-index: -100;
+    }
+
+    .fullscreen-bg-Xvideo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: auto;
+      height: auto;
+      min-width: 100%;
+      min-height: 100%;
+      -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    @media (max-width: 767px) {
+      .fullscreen-bg {
+        background: url('video/background.jpg') center center / cover no-repeat;
+      }
+
+      .fullscreen-bg-video {
+        display: none;
+      }
     }
   </style>
 </head>
@@ -76,6 +130,9 @@
     <img src="img/logo.png" alt="ivelum">
   </p>
   <h1>Создаем и поддерживаем крупные веб-проекты на Python и .NET</h1>
+  <p class="job">
+    <a href="https://github.com/ivelum/job/wiki">Работа у нас</a>
+  </p>
   <p class="address">
     Адрес офиса в Воронеже: Московский проспект 7Е
     (<a href="https://yandex.ru/maps/-/CVTeJLY3" target="_blank">на карте</a>),
@@ -83,10 +140,14 @@
     тел. <a href="tel:+74956461441" class="phone">+7 (495) 646 14 41</a><br>
     <a href="mailto:info@ivelum.com">info@ivelum.com</a>
   </p>
-  <p class="job">
-    <a href="https://github.com/ivelum/job/wiki">Работа у нас</a>
-  </p>
   <p class="copyright">&copy; ivelum 2003-<script>document.write(new Date().getFullYear())</script></p>
+</div>
+<div class="fullscreen-bg">
+    <video loop muted autoplay poster="video/background.jpg" class="fullscreen-bg-video">
+        <source src="video/background.webm" type="video/webm">
+        <source src="video/background.mp4" type="video/mp4">
+        <source src="video/background.ogv" type="video/ogg">
+    </video>
 </div>
 </body>
 </html>
