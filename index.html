@@ -115,7 +115,11 @@
 
     @media (max-width: 767px) {
       .fullscreen-bg {
-        background: url('video/background.jpg') center center / cover no-repeat;
+        background: url('video/background.jpg') center center no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
       }
 
       .fullscreen-bg-video {
