@@ -82,6 +82,7 @@ h1 {
   white-space: nowrap;
 }
 
+/* Bachground */
 .fullscreen-bg {
   position: fixed;
   top: 0;
@@ -92,7 +93,9 @@ h1 {
   z-index: -100;
 }
 
-.fullscreen-bg-Xvideo {
+/* BG video */
+
+.fullscreen-bg-video {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -108,14 +111,11 @@ h1 {
 
 @media (max-width: 767px) {
   .fullscreen-bg {
-	background: url('video/background.jpg') center center no-repeat;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+    background: url('../video/background.jpg') center center no-repeat;
+    background-size: cover;
   }
 
   .fullscreen-bg-video {
-	display: none;
+    display: none;
   }
 }
