@@ -8,10 +8,8 @@
   <title>ivelum - создаем и поддерживаем крупные веб-проекты на Python и .NET</title>
 </head>
 <body>
+<img class="logo" src="img/logo.png" alt="ivelum">
 <div class="container">
-  <p class="logo">
-    <img src="img/logo.png" alt="ivelum">
-  </p>
   <h1>Создаем и поддерживаем крупные веб-проекты на Python и .NET</h1>
   <p class="job">
     <a href="https://github.com/ivelum/job/wiki">Работа у нас</a>
@@ -26,11 +24,16 @@
   <p class="copyright">&copy; ivelum 2003-<script>document.write(new Date().getFullYear())</script></p>
 </div>
 <div class="fullscreen-bg">
-  <video loop muted autoplay poster="video/background.jpg" class="fullscreen-bg-video">
-    <source src="video/background.webm" type="video/webm">
-    <source src="video/background.mp4" type="video/mp4">
-    <source src="video/background.ogv" type="video/ogg">
-  </video>
+  <div class="fullscreen-bg-inner">
+    <div class="fullscreen-bg-video-wrap">
+	  	<video loop muted preload="auto" autoplay poster="video/background.jpg" class="fullscreen-bg-video">
+	  	  <source src="video/background.webm" type="video/webm">
+	  	  <source src="video/background.mp4" type="video/mp4">
+	  	  <source src="video/background.ogv" type="video/ogg">
+	  	</video>
+	    <canvas></canvas>
+	  </div>
+	</div>
 </div>
 </body>
 </html>

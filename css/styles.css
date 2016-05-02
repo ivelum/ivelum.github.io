@@ -1,3 +1,9 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 62.5%;
   margin: 0;
@@ -18,27 +24,21 @@ body {
 
 .container {
   max-width: 80%;
-  margin: 15% auto 0;
+  margin: 11.5% auto 0;
   text-align: center;
 }
 
 .logo {
-  padding: 0;
-  margin: 0;
-  position: absolute;
-  top: 30px;
-  left: 30px;
-}
-
-.logo img {
   width: 200px;
+  padding: 0;
+  margin: 1.87em 0 0 1.87em;
 }
 
 h1 {
+  color: #fff;
   font-size: 4rem;
   font-weight: normal;
-  letter-spacing: -0.1rem;
-  color: #fff;
+  letter-spacing: -0.025em;
 }
 
 .job {
@@ -46,23 +46,25 @@ h1 {
 }
 
 .job a {
+  display: inline-block;
+  white-space: nowrap;
+  padding: 0.5rem 3rem;
+  height: 5rem;
+  
   background-color: #fc7820;
   border: .1rem solid #fc7820;
   border-radius: .4rem;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, .3);
   color: #fff;
   cursor: pointer;
-  display: inline-block;
+  
   font-size: 2rem;
   font-weight: normal;
-  height: 4rem;
-  letter-spacing: .1rem;
-  line-height: 4rem;
-  padding: 0.5rem 3rem;
+  letter-spacing: .05em;
+  line-height: 2;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  white-space: nowrap;
-  box-shadow: 0 4px 5px rgba(0, 0, 0, .3);
 }
 
 .job a:hover {
@@ -91,25 +93,54 @@ h1 {
   left: 0;
   overflow: hidden;
   z-index: -100;
+  
 }
 
 /* BG video */
+  
+.fullscreen-bg-inner{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.fullscreen-bg-video-wrap,
+.fullscreen-bg-video,
+.fullscreen-bg-inner > canvas {
+  display: block;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto !important;
+  height: auto !important;
+}
 
 .fullscreen-bg-video {
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 50%;
-  width: auto;
-  height: auto;
-  min-width: 100%;
-  min-height: 100%;
-  -webkit-transform: translate(-50%, -50%);
-	-moz-transform: translate(-50%, -50%);
-	  -ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, 0);
+	-moz-transform: translate(-50%, 0);
+	  -ms-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+}
+
+.fullscreen-bg-inner > canvas {
+  position: relative;
+  visibility: hidden;
+  z-index: -1;
 }
 
 @media (max-width: 767px) {
+  h1 {
+    font-size: 2.5rem;
+    /* letter-spacing: -.4rem; */
+  }
+  
+  .logo {
+    width: 150px;
+  }
+
   .fullscreen-bg {
     background: url('../video/background.jpg') center center no-repeat;
     background-size: cover;
@@ -117,5 +148,12 @@ h1 {
 
   .fullscreen-bg-video {
     display: none;
+  }
+}
+
+/* So that there is no vertical scroll on short screens */
+@media (max-height: 700px) {
+  .container {
+    margin-top: 6%;
   }
 }
