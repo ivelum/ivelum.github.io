@@ -93,8 +93,8 @@ h1 {
 }
 
 .clients ul li {
-  width: 152px;
-  height: 152px;
+  width: 162px;
+  height: 162px;
   display: inline-block;
   overflow: hidden;
   vertical-align: middle;
@@ -102,6 +102,12 @@ h1 {
   background-color: #fff;
   line-height: 140px;
   border: 1px solid #fc7820;
+  padding: 5px;
+  border-radius: .4rem;
+}
+
+.clients ul li.logo-utc {
+  background-color: #0c40a1;
 }
 
 .clients img {
@@ -210,6 +216,7 @@ h1 {
     width: 102px;
     height: 102px;
     line-height: 90px;
+    padding: 0;
   }
   .clients img {
     width: 100px;
