@@ -228,10 +228,3 @@ h1 {
     display: block;
   }
 }
-
-/* So that there is no vertical scroll on short screens */
-@media (max-height: 700px) {
-  .container {
-    padding-top: 6%;
-  }
-}
