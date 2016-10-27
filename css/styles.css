@@ -36,6 +36,11 @@ body {
   left: 1.87rem;
 }
 
+.instagram-icon img {
+  width: 24px;
+  height: 24px;
+}
+
 .logo img {
   width: 200px;
 }
