@@ -27,7 +27,7 @@ body {
   max-width: 80%;
   margin: 0 auto;
   padding-top: 11.5%;
-  text-align: center;
+  text-align: left;
 }
 
 .logo {
@@ -84,10 +84,17 @@ h1 {
 }
 
 .clients {
-  text-align: center;
+  text-align: left;
+  margin-bottom: 4rem;
 }
 
-.clients h2 {
+.contributions {
+  text-align: left;
+  margin-bottom: 4rem;
+}
+
+.clients h2,
+.contributions h2 {
   font-weight: normal;
 }
 
@@ -103,7 +110,7 @@ h1 {
   display: inline-block;
   overflow: hidden;
   vertical-align: middle;
-  margin: .5rem;
+  margin: .5rem 1rem .5rem 0;
   background-color: #fff;
   line-height: 140px;
   border: 1px solid #fc7820;
@@ -132,7 +139,17 @@ h1 {
   font-size: 1.5rem;
 }
 
-.address a, .address-btn a {
+.contributions p {
+  margin-top: 0;
+}
+
+.contributions a {
+  font-size: 2rem;
+  color: #ff944b;
+}
+
+.address a,
+.address-btn a {
   color: #fc7820;
 }
 
