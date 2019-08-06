@@ -320,29 +320,6 @@
   display: block;
 }
 
-.instagram__arrow {
-  display: none;
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  z-index: 9;
-}
-
-.instagram__arrow--left {
-  left: 0;
-}
-
-.instagram__arrow--right {
-  right: 0;
-}
-
-@media (hover), (min-width: 0\0), (min--moz-device-pixel-ratio: 0) {
-  .instagram__arrow {
-    display: block;
-  }
-}
-
 @media screen and (max-width: 1279px) {
   .br-xl {
     display: none;
@@ -1464,9 +1441,6 @@
     -webkit-transform: rotate(-90deg) translateX(50%);
     -ms-transform: rotate(-90deg) translateX(50%);
     transform: rotate(-90deg) translateX(50%);
-  }
-  .instagram__arrow {
-    display: none;
   }
 }
 

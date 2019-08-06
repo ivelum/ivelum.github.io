@@ -52,41 +52,43 @@ var mySwiper = new Swiper('#slider', {
   freeMode: true,
   slidesPerView: 'auto',
   observer: true,
-  observeParents: true
+  observeParents: true,
+  grabCursor: true,
 });
 
 var mySwiperModal = new Swiper('#modal-slider', {
   freeMode: true,
   slidesPerView: 'auto',
   observer: true,
-  observeParents: true
+  observeParents: true,
+  grabCursor: true,
 });
 
-var leftArrow = document.getElementById("sliderLeftArrow");
-var rightArrow = document.getElementById("sliderRightArrow");
+// var leftArrow = document.getElementById("sliderLeftArrow");
+// var rightArrow = document.getElementById("sliderRightArrow");
 
-if (leftArrow) {
-  leftArrow.addEventListener('mouseover', function (event) {
-    mySwiper["params"].autoplay.reverseDirection = true;
-    mySwiper["params"].autoplay.delay = 1000;
-    mySwiper["params"].autoplay.stopOnLastSlide = true;
-    mySwiper.slidePrev();
-    mySwiper.autoplay.start();
-  });
-  rightArrow.addEventListener('mouseover', function (event) {
-    mySwiper["params"].autoplay.reverseDirection = false;
-    mySwiper["params"].autoplay.delay = 1000;
-    mySwiper["params"].autoplay.stopOnLastSlide = true;
-    mySwiper.slideNext();
-    mySwiper.autoplay.start();
-  });
-  leftArrow.addEventListener('mouseleave', function (event) {
-    mySwiper.autoplay.stop();
-  });
-  rightArrow.addEventListener('mouseleave', function (event) {
-    mySwiper.autoplay.stop();
-  });
-}
+// if (leftArrow) {
+//   leftArrow.addEventListener('mouseover', function (event) {
+//     mySwiper["params"].autoplay.reverseDirection = true;
+//     mySwiper["params"].autoplay.delay = 1000;
+//     mySwiper["params"].autoplay.stopOnLastSlide = true;
+//     mySwiper.slidePrev();
+//     mySwiper.autoplay.start();
+//   });
+//   rightArrow.addEventListener('mouseover', function (event) {
+//     mySwiper["params"].autoplay.reverseDirection = false;
+//     mySwiper["params"].autoplay.delay = 1000;
+//     mySwiper["params"].autoplay.stopOnLastSlide = true;
+//     mySwiper.slideNext();
+//     mySwiper.autoplay.start();
+//   });
+//   leftArrow.addEventListener('mouseleave', function (event) {
+//     mySwiper.autoplay.stop();
+//   });
+//   rightArrow.addEventListener('mouseleave', function (event) {
+//     mySwiper.autoplay.stop();
+//   });
+// }
 
 // function scrollIt(destination) {
 //   var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 200;
