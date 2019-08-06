@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="148px" height="78px" viewBox="0 0 148 78" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop_Ivelum_Site_5.8-Copy" transform="translate(-375.000000, -7593.000000)" stroke="#FF5A00" stroke-width="4">
+            <g id="Group-7-Copy" transform="translate(448.500000, 7632.000000) scale(-1, 1) translate(-448.500000, -7632.000000) translate(375.000000, 7595.000000)">
+                <path d="M0,0.166666667 C40.0455729,-1.23177083 63.1106771,8.40234375 69.1953125,29.0690104 C78.3222656,60.0690104 22.0253906,59.4863281 28.0253906,37.5 C34.0253906,15.5136719 75.9101562,24.8376299 96,31.8415009 C116.089844,38.8453719 133.238281,58.3190104 145.009766,73.3190104" id="Path-2"></path>
+                <polyline id="Path" transform="translate(126.899123, 52.978425) rotate(93.000000) translate(-126.899123, -52.978425) " points="108.00311 38.1837253 145.795136 34.2415431 136.702799 71.7153077"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

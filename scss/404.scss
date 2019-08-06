@@ -1,0 +1,146 @@
+@import './all';
+
+.page-404 {
+  overflow-x: hidden;
+}
+
+.block-404 {
+  padding-top: 11px;
+  padding-bottom: 96px;
+  &__title {
+    font-family: $accent-font-family;
+    color: $accent-color;
+    font-size: 72px;
+    line-height: 87px;
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: -0.432px;
+  }
+  
+  &__text {
+    margin-top: 1px;
+    margin-bottom: 0;
+    word-break: break-all;
+    padding-left: $compensation-text;
+    letter-spacing: -0.216px;
+    font-size: 36px;
+    line-height: 60px;
+  }
+  &__illustration {
+    margin-top: 52px;
+  }
+}
+
+.page-404-copyright {
+  position: relative;
+  height: 0;
+  width: 100%;
+  
+  &__text {
+    transform-origin: 0 0;
+    position: absolute;
+    left: calc(100% - 21px);
+    bottom: 16px;
+    transform: rotate(-90deg) translateY(-100%);
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .block-404 {
+    &__title {
+      font-size: 60px;
+      line-height: 68px;
+      letter-spacing: -0.36px;
+    }
+    
+    &__text {
+      font-size: 28px;
+      line-height: 45px;
+      letter-spacing: -0.168px;
+    }
+    
+    &__illustration {
+      margin-top: 52px;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .page-404-copyright__text {
+    left: 100%;
+    bottom: -10px;
+  }
+  
+  .block-404 {
+    padding-top: 20px;
+    padding-bottom: 60px;
+    &__title {
+      font-size: 46px;
+      line-height: 54px;
+      letter-spacing: -0.276px;
+    }
+    &__text {
+      font-size: 24px;
+      line-height: 41px;
+      letter-spacing: -0.144px;
+      max-height: 122px;
+      overflow: hidden;
+    }
+    &__illustration {
+      margin-top: 36px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .block-404 {
+    &__title {
+      font-size: 42px;
+      line-height: 43px;
+      letter-spacing: -0.216px;
+    }
+    &__text {
+      font-size: 20px;
+      line-height: 33px;
+      letter-spacing: -0.12px;
+      max-height: 128px;
+    }
+    &__illustration {
+      margin-top: 36px;
+    }
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .block-404 {
+    padding-top: 44px;
+    padding-bottom: 26px;
+    &__title {
+      font-size: 38px;
+      line-height: 1;
+      letter-spacing: -0.228px;
+      margin-left: -3px;
+    }
+    &__text {
+      margin-top: 6px;
+      font-size: 18px;
+      line-height: 29px;
+      letter-spacing: -0.108px;
+      padding-left: 0;
+      margin-right: -10px;
+      max-height: 82px;
+    }
+  }
+  
+  .page-404-copyright {
+    height: auto;
+    &__text {
+      position: relative;
+      left: 0;
+      bottom: 0;
+      transform: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
