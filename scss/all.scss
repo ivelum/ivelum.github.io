@@ -289,29 +289,6 @@ $compensation-accent-text: -4px;
       display: block;
     }
   }
-  
-  // &__arrow {
-  //   display: none;
-  //   width: 50%;
-  //   height: 100%;
-  //   position: absolute;
-  //   top: 0;
-  //   z-index: 9;
-    
-  //   &--left {
-  //     left: 0;
-  //   }
-  //   &--right {
-  //     right: 0;
-  //   }
-  // }
-}
-
-// @media (hover) , (min-width:0\0) , (min--moz-device-pixel-ratio:0) {
-//   .instagram__arrow {
-//     display: block;
-//   }
-// }
 
 @media screen and (max-width: 1279px) {
   .br-xl {
