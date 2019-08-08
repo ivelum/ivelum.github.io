@@ -507,6 +507,7 @@ html {
     &__header {
       position: relative;
       padding-bottom: 27px;
+      width: calc(100% + 24px);
       
       
       &:after {
@@ -530,7 +531,7 @@ html {
       position: absolute;
       opacity: 0;
       top: -11px;
-      right: -11px;
+      right: 13px;
       width: 55px;
       height: 55px;
       cursor: pointer;
@@ -563,10 +564,7 @@ html {
     
     &__body {
       opacity: 0;
-      max-width: 520px;
       width: 100%;
-      margin-left: auto;
-      margin-right: auto;
       margin-bottom: 88px;
     }
     
@@ -600,10 +598,6 @@ html {
       }
       
       &-wrapper {
-        max-width: 568px;
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
         padding-left: 24px;
         padding-right: 24px;
         box-sizing: border-box;
@@ -665,31 +659,33 @@ html {
         background-position: center right;
         background-repeat: no-repeat;
       }
-      
+
       &:first-child:before {
         background-image: url('../images/mobile-arrow1.svg');
       }
-      
+
       &:nth-child(2):before {
         background-image: url('../images/mobile-arrow2.svg');
       }
+
       &:nth-child(3):before {
         background-image: url('../images/mobile-arrow3.svg');
       }
+
       &:nth-child(4):before {
         background-image: url('../images/mobile-arrow4.svg');
       }
-      
+
       &:after {
         content: '';
         position: absolute;
-        width: 100%;
         bottom: 0;
         left: 0;
         height: 2px;
+        width: calc(100% + 24px);
         background-color: rgba($white-color, .2);
       }
-      
+
       &-text {
         z-index: 2;
         font-family: $accent-font-family;
@@ -824,15 +820,5 @@ html {
     font-size: 10px;
     line-height: 30px;
     letter-spacing: -0.06px;
-  }
-  
-  .modal__header {
-    width: calc(100% + 24px);
-  }
-  .modal__toggle {
-    right: 13px;
-  }
-  .mobile-menu__link:after {
-    width: calc(100% + 24px);
   }
 }

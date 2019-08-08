@@ -541,6 +541,7 @@ html {
   .modal__header {
     position: relative;
     padding-bottom: 27px;
+    width: calc(100% + 24px);
   }
   .modal__header:after {
     content: '';
@@ -560,7 +561,7 @@ html {
     position: absolute;
     opacity: 0;
     top: -11px;
-    right: -11px;
+    right: 13px;
     width: 55px;
     height: 55px;
     cursor: pointer;
@@ -594,10 +595,7 @@ html {
   }
   .modal__body {
     opacity: 0;
-    max-width: 520px;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
     margin-bottom: 88px;
   }
   .modal__instagram {
@@ -625,10 +623,6 @@ html {
     width: 128px;
   }
   .modal__instagram-wrapper {
-    max-width: 568px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
     padding-left: 24px;
     padding-right: 24px;
     -webkit-box-sizing: border-box;
@@ -708,10 +702,10 @@ html {
   .mobile-menu__link:after {
     content: '';
     position: absolute;
-    width: 100%;
     bottom: 0;
     left: 0;
     height: 2px;
+    width: calc(100% + 24px);
     background-color: rgba(255, 255, 255, 0.2);
   }
   .mobile-menu__link-text {
@@ -822,15 +816,6 @@ html {
     font-size: 10px;
     line-height: 30px;
     letter-spacing: -0.06px;
-  }
-  .modal__header {
-    width: calc(100% + 24px);
-  }
-  .modal__toggle {
-    right: 13px;
-  }
-  .mobile-menu__link:after {
-    width: calc(100% + 24px);
   }
 }
 
