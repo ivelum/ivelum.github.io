@@ -20,6 +20,9 @@ $compensation-accent-text: -4px;
   font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 .body {
   font-family: $main-font-family;
@@ -32,6 +35,7 @@ $compensation-accent-text: -4px;
   color: $main-color;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: auto;
+  
 }
 
 .c-symb {
