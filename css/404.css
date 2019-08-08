@@ -592,6 +592,7 @@
     opacity: 0;
     display: block;
     font-family: "Snippet", sans-serif;
+    font-weight: 400;
     font-size: 25px;
     line-height: 1;
     letter-spacing: -0.15px;
@@ -825,6 +826,14 @@
 
 .page-404 {
   overflow-x: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 .block-404 {
@@ -857,6 +866,7 @@
 }
 
 .page-404-copyright {
+  margin-top: auto;
   position: relative;
   height: 0;
   width: 100%;
