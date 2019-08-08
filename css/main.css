@@ -474,7 +474,6 @@
     animation: opacity 1s ease-in reverse forwards;
   }
   .modal {
-    display: none;
     bottom: 0;
     left: 0;
     top: 0;
@@ -746,12 +745,6 @@
   .dib-lg {
     display: inline;
   }
-  .br-sm {
-    display: block;
-  }
-  .br-md {
-    display: none;
-  }
   .toggle-menu {
     position: fixed;
     right: 42px;
@@ -793,9 +786,6 @@
   }
   .dib-lg {
     display: inline;
-  }
-  .br-sm {
-    display: block;
   }
   .toggle-menu {
     right: 17px;
@@ -927,6 +917,10 @@
   display: none;
 }
 
+.about__slider-br {
+  display: none;
+}
+
 @media (hover), (min-width: 0\0), (min--moz-device-pixel-ratio: 0) {
   .about__slider {
     position: relative;
@@ -940,6 +934,9 @@
   }
   .about__slider:hover {
     color: #FF5A00;
+  }
+  .about__slider-br {
+    display: block;
   }
   .about__slider-wrapper {
     display: -webkit-box;

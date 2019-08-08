@@ -444,7 +444,6 @@ $compensation-accent-text: -4px;
   }
   
   .modal {
-    display: none;
     bottom: 0;
     left: 0;
     top: 0;
@@ -455,8 +454,7 @@ $compensation-accent-text: -4px;
     position: fixed;
     z-index: 10;
     overflow-y: auto;
-    
-    
+
     &.show {
       display: block;
       
@@ -731,15 +729,7 @@ $compensation-accent-text: -4px;
   .dib-lg {
     display: inline;
   }
-  
-  .br-sm {
-    display: block;
-  }
-  
-  .br-md {
-    display: none;
-  }
-  
+
   .toggle-menu {
     position: fixed;
     right: 42px;
@@ -792,11 +782,7 @@ $compensation-accent-text: -4px;
   .dib-lg {
     display: inline;
   }
-  
-  .br-sm {
-    display: block;
-  }
-  
+
   .toggle-menu {
     right: 17px;
     top: 14px;

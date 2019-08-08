@@ -81,6 +81,9 @@
     &-wrapper {
       display: none;
     }
+    &-br {
+      display: none;
+    }
   }
   
   @media (hover) , (min-width:0\0) , (min--moz-device-pixel-ratio:0) {
@@ -94,6 +97,10 @@
       @include trans(color);
       &:hover {
         color: $accent-color;
+      }
+
+      &-br {
+        display: block;
       }
       
       &-wrapper {

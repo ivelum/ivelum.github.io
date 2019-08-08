@@ -474,7 +474,6 @@
     animation: opacity 1s ease-in reverse forwards;
   }
   .modal {
-    display: none;
     bottom: 0;
     left: 0;
     top: 0;
@@ -746,12 +745,6 @@
   .dib-lg {
     display: inline;
   }
-  .br-sm {
-    display: block;
-  }
-  .br-md {
-    display: none;
-  }
   .toggle-menu {
     position: fixed;
     right: 42px;
@@ -793,9 +786,6 @@
   }
   .dib-lg {
     display: inline;
-  }
-  .br-sm {
-    display: block;
   }
   .toggle-menu {
     right: 17px;
