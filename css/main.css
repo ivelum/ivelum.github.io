@@ -706,13 +706,6 @@
     margin-bottom: 5px;
     padding-right: 4px;
   }
-  [data-swiper-slide-index="0"]:after {
-    width: 3350px;
-    height: 104px;
-    background-size: cover;
-    left: -27px;
-    display: none;
-  }
 }
 
 @media screen and (max-width: 767px) {
@@ -754,6 +747,12 @@
     margin-top: 0;
     padding-left: 70px;
     padding-right: 70px;
+  }
+  [data-swiper-slide-index="0"]:after {
+    width: 3350px;
+    height: 104px;
+    background-size: cover;
+    left: -27px;
   }
 }
 
