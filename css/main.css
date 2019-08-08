@@ -113,6 +113,9 @@
   padding-right: 60px;
   padding-top: 60px;
   padding-bottom: 20px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 .header.show {
@@ -170,6 +173,11 @@
 
 .header--fixed .nav__link--instagram {
   margin-left: 4px;
+}
+
+.logo {
+  text-decoration: none;
+  display: block;
 }
 
 .logo__img {

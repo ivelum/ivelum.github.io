@@ -100,6 +100,7 @@ $compensation-accent-text: -4px;
     padding-right: 60px;
     padding-top: 60px;
     padding-bottom: 20px;
+    align-items: flex-start;
   }
   
   display: flex;
@@ -160,6 +161,8 @@ $compensation-accent-text: -4px;
 }
 
 .logo {
+  text-decoration: none;
+  display: block;
   &__img {
     display: block;
   }
