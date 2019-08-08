@@ -54,6 +54,8 @@ var mySwiper = new Swiper('#slider', {
   observer: true,
   observeParents: true,
   grabCursor: true,
+  loop: true,
+  loopedSlides: 23,
 });
 
 var mySwiperModal = new Swiper('#modal-slider', {
@@ -62,4 +64,6 @@ var mySwiperModal = new Swiper('#modal-slider', {
   observer: true,
   observeParents: true,
   grabCursor: true,
+  loop: true,
+  loopedSlides: 23,
 });

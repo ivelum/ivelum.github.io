@@ -311,12 +311,11 @@
   width: 255px;
 }
 
-.instagram__photo-item-wrap {
-  position: relative;
-}
-
 .instagram__photo-item-img {
   width: 255px;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
   display: block;
 }
 
