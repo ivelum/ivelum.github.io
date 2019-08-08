@@ -589,7 +589,7 @@ $compensation-accent-text: -4px;
         
         &.swiper-slide,
         &-img {
-          width: 127px;
+          width: 128px;
         }
       }
       
@@ -623,6 +623,15 @@ $compensation-accent-text: -4px;
       margin-left: -8px;
       margin-right: -8px;
       width: calc(100% + 16px);
+    }
+
+    [data-swiper-slide-index="0"] {
+      &:after {
+        width: 3350px;
+        height: 104px;
+        background-size: cover;
+        left: -27px;
+      }
     }
   }
   

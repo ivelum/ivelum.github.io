@@ -610,7 +610,7 @@
     margin-right: 8px;
   }
   .modal__instagram .instagram__photo-item.swiper-slide, .modal__instagram .instagram__photo-item-img {
-    width: 127px;
+    width: 128px;
   }
   .modal__instagram-wrapper {
     max-width: 568px;
@@ -639,6 +639,12 @@
     margin-left: -8px;
     margin-right: -8px;
     width: calc(100% + 16px);
+  }
+  .modal [data-swiper-slide-index="0"]:after {
+    width: 3350px;
+    height: 104px;
+    background-size: cover;
+    left: -27px;
   }
   .mobile-menu {
     display: -webkit-box;
