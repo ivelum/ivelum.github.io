@@ -904,10 +904,6 @@
       height: 25px;
       margin-top: 0;
     }
-    &__illustration {
-      margin-left: -56px;
-      margin-right: -50px;
-    }
     &__strong-text {
       margin-top: 28px;
       font-size: 32px;
@@ -934,7 +930,7 @@
   .technologies {
     &__illustration {
       margin-left: 0;
-      margin-right: -45px;
+      margin-right: 0;
       margin-top: 42px;
     }
     &__second-title {
@@ -947,8 +943,8 @@
     margin-top: 57px;
     
     &__illustration {
-      margin-left: -45px;
-      margin-right: -22px;
+      margin-left: 0;
+      margin-right: 0;
     }
     &__title {
       padding-top: 28px;

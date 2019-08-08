@@ -1697,10 +1697,6 @@
     height: 25px;
     margin-top: 0;
   }
-  .about__illustration {
-    margin-left: -56px;
-    margin-right: -50px;
-  }
   .about__strong-text {
     margin-top: 28px;
     font-size: 32px;
@@ -1721,7 +1717,7 @@
   }
   .technologies__illustration {
     margin-left: 0;
-    margin-right: -45px;
+    margin-right: 0;
     margin-top: 42px;
   }
   .technologies__second-title {
@@ -1732,8 +1728,8 @@
     margin-top: 57px;
   }
   .teamplify__illustration {
-    margin-left: -45px;
-    margin-right: -22px;
+    margin-left: 0;
+    margin-right: 0;
   }
   .teamplify__title {
     padding-top: 28px;
