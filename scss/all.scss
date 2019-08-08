@@ -568,6 +568,7 @@ $compensation-accent-text: -4px;
       opacity: 0;
       display: block;
       font-family: $accent-font-family;
+      font-weight: 400;
       font-size: 25px;
       line-height: 1;
       letter-spacing: -0.15px;
@@ -677,6 +678,7 @@ $compensation-accent-text: -4px;
       &-text {
         z-index: 2;
         font-family: $accent-font-family;
+        font-weight: 400;
         font-size: 48px;
         line-height: 125%;
         letter-spacing: -0.288px;

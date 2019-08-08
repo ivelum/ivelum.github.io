@@ -592,6 +592,7 @@
     opacity: 0;
     display: block;
     font-family: "Snippet", sans-serif;
+    font-weight: 400;
     font-size: 25px;
     line-height: 1;
     letter-spacing: -0.15px;
@@ -698,6 +699,7 @@
   .mobile-menu__link-text {
     z-index: 2;
     font-family: "Snippet", sans-serif;
+    font-weight: 400;
     font-size: 48px;
     line-height: 125%;
     letter-spacing: -0.288px;
@@ -895,6 +897,7 @@
   line-height: 121%;
   letter-spacing: -0.432px;
   font-family: "Snippet", sans-serif;
+  font-weight: 400;
   margin-left: -4px;
 }
 
