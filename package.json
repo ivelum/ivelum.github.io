@@ -5,7 +5,7 @@
   "scripts": {
     "clean": "rimraf css/",
     "clean:all.css": "npx rimraf css/all.css",
-    "postcss": "postcss css/*.css --replace --use autoprefixer",
+    "postcss": "postcss css/*.css --replace --no-map --use autoprefixer",
     "scss": "node-sass --output-style expanded --source-map true scss -o css/",
     "scss:watch": "node-sass --output-style expanded --watch --source-map true scss -o css/",
     "scss:build": "node-sass --output-style expanded scss -o css/",
