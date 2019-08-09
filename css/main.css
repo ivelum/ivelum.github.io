@@ -46,6 +46,20 @@ html {
   display: none;
 }
 
+@-webkit-keyframes line {
+  0% {
+    stroke-dashoffset: 50000;
+    stroke-width: 5;
+  }
+  30% {
+    stroke-width: 40;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-width: 60;
+  }
+}
+
 @keyframes line {
   0% {
     stroke-dashoffset: 50000;
@@ -57,6 +71,15 @@ html {
   100% {
     stroke-dashoffset: 0;
     stroke-width: 60;
+  }
+}
+
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -261,7 +284,8 @@ html {
 .instagram__photo-item-img {
   display: block;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 255px;
 }
 
@@ -420,16 +444,20 @@ html {
     display: block;
   }
   .modal.show .modal__wrapper::before {
-    animation: opacity 0.7s ease-in forwards;
+    -webkit-animation: opacity 0.7s ease-in forwards;
+            animation: opacity 0.7s ease-in forwards;
   }
   .modal.show .modal__logo, .modal.show .modal__header::after {
-    animation: opacity 1s ease-in forwards 0.5s;
+    -webkit-animation: opacity 1s ease-in forwards 0.5s;
+            animation: opacity 1s ease-in forwards 0.5s;
   }
   .modal.show .modal__toggle {
-    animation: opacity 1s ease-in forwards 1s;
+    -webkit-animation: opacity 1s ease-in forwards 1s;
+            animation: opacity 1s ease-in forwards 1s;
   }
   .modal.show .modal__body, .modal.show .modal__instagram {
-    animation: opacity 1s ease-in forwards 1s;
+    -webkit-animation: opacity 1s ease-in forwards 1s;
+            animation: opacity 1s ease-in forwards 1s;
   }
   .modal__wrapper {
     box-sizing: border-box;
@@ -742,8 +770,7 @@ html {
   color: #ff5a00;
 }
 
-.section__title,
-.section .footer__title {
+.section__title {
   color: #ff5a00;
   font-family: "Snippet", sans-serif;
   font-size: 88px;
@@ -1000,6 +1027,13 @@ html {
 }
 
 .footer__title {
+  color: #ff5a00;
+  font-family: "Snippet", sans-serif;
+  font-size: 88px;
+  font-weight: 400;
+  letter-spacing: -0.528px;
+  line-height: 68%;
+  margin: 0;
   width: 100%;
 }
 
@@ -1024,15 +1058,12 @@ html {
 }
 
 .footer__address {
-  align-items: flex-start;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
   font-size: 36px;
   letter-spacing: -0.216px;
   line-height: 122%;
   margin-top: 38px;
   max-width: 360px;
+  width: 100%;
 }
 
 .footer__address-street {
@@ -1627,5 +1658,3 @@ html {
     padding-top: 28px;
   }
 }
-
-/*# sourceMappingURL=main.css.map */

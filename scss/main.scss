@@ -26,8 +26,7 @@
 }
 
 .section {
-  &__title,
-  %section__title {
+  &__title {
     color: $accent-color;
     font-family: $accent-font-family;
     font-size: 88px;
@@ -297,7 +296,13 @@
   }
   
   &__title {
-    @extend %section__title;
+    color: $accent-color;
+    font-family: $accent-font-family;
+    font-size: 88px;
+    font-weight: 400;
+    letter-spacing: -0.528px;
+    line-height: 68%;
+    margin: 0;
     width: 100%;
   }
   
@@ -322,16 +327,12 @@
   }
 
   &__address {
-    align-items: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
     font-size: 36px;
     letter-spacing: -0.216px;
     line-height: 122%;
     margin-top: 38px;
     max-width: 360px;
-    
+    width: 100%;
     &-street {
       white-space: nowrap;
     }
