@@ -1,22 +1,23 @@
 @import './all';
 
-.link {
-  text-decoration: none;
-  color: $main-color;
-  font-weight: 500;
-  font-style: italic;
+.link,
+%link {
   @include trans(color);
-  position: relative;
+  color: $main-color;
   display: inline-block;
+  font-style: italic;
+  font-weight: 500;
+  position: relative;
+  text-decoration: none;
   
-  &:after {
-    content: '';
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    bottom: 4px;
-    height: 4px;
+  &::after {
     background-color: $accent-color;
+    bottom: 4px;
+    content: '';
+    height: 4px;
+    left: 0;
+    position: absolute;
+    right: 0;
   }
   
   &:hover {
@@ -25,15 +26,17 @@
 }
 
 .section {
-  &__title {
-    font-family: $accent-font-family;
+  &__title,
+  %section__title {
     color: $accent-color;
+    font-family: $accent-font-family;
     font-size: 88px;
-    line-height: 68%;
-    letter-spacing: -0.528px;
     font-weight: 400;
+    letter-spacing: -0.528px;
+    line-height: 68%;
     margin: 0;
   }
+
   &__text {
     letter-spacing: -0.216px;
     margin: 0;
@@ -50,27 +53,29 @@
   &__lithuania {
     display: inline-block;
   }
+
   &__lithuania-img {
-    vertical-align: middle;
     display: inline-block;
     margin-right: 12px;
     margin-top: -5px;
+    vertical-align: middle;
   }
   
   &__illustration {
-    margin-top: 80px;
     margin-left: -40px;
     margin-right: -40px;
+    margin-top: 80px;
   }
   
   &__strong-text {
-    margin-top: 30px;
-    font-size: 72px;
-    line-height: 121%;
-    letter-spacing: -0.432px;
     font-family: $accent-font-family;
+    font-size: 72px;
     font-weight: 400;
+    letter-spacing: -0.432px;
+    line-height: 121%;
     margin-left: $compensation-accent-text;
+    margin-top: 30px;
+
     &--color {
       color: $accent-color;
     }
@@ -78,23 +83,25 @@
   
   &__slider {
     font-weight: 300;
+
     &-wrapper {
       display: none;
     }
+
     &-br {
       display: none;
     }
   }
-  
-  @media (hover) , (min-width:0\0) , (min--moz-device-pixel-ratio:0) {
-    
+
+  @media (hover) , (min-width:0\0) {
     &__slider {
-      position: relative;
-      font-weight: 500;
-      padding-right: 3px;
-      margin-right: -3px;
-      display: inline-block;
       @include trans(color);
+      display: inline-block;
+      font-weight: 500;
+      margin-right: -3px;
+      padding-right: 3px;
+      position: relative;
+
       &:hover {
         color: $accent-color;
       }
@@ -104,43 +111,46 @@
       }
       
       &-wrapper {
+        bottom: 0;
         display: flex;
-        position: absolute;
-        bottom: 0px;
-        left: 0px;
-        width: 100%;
         height: 100%;
+        left: 0;
+        position: absolute;
+        width: 100%;
       }
+
       &-dots-item {
-        width: calc(100%/11);
         height: 100%;
         position: relative;
+        width: calc(100%/11);
         
         &:hover {
-          & + .about__slider-image-wrapper {
-            opacity: 1;
-            visibility: visible;
-            z-index: 2;
-            
+          + .about {
+            &__slider-image-wrapper {
+              opacity: 1;
+              visibility: visible;
+              z-index: 2;
+            }
           }
-          &::after{
-            width: 6px;
-            height: 8px;
+
+          &::after {
             bottom: 3px;
+            height: 8px;
+            width: 6px;
           }
         }
         
-        &:after {
-          content: '';
-          width: 4px;
-          height: 4px;
-          background-color: $accent-color;
-          position: absolute;
-          bottom: 5px;
-          left: 50%;
-          transform: translateX(-50%);
-          display: block;
+        &::after {
           @include trans(all);
+          background-color: $accent-color;
+          bottom: 5px;
+          content: '';
+          display: block;
+          height: 4px;
+          left: 50%;
+          position: absolute;
+          transform: translateX(-50%);
+          width: 4px;
         }
       }
       
@@ -149,14 +159,14 @@
         width: 100%;
         
         &-wrapper {
-          width: 400px;
-          position: absolute;
-          left: 0;
-          top: 97px;
-          opacity: 0;
-          visibility: hidden;
-          z-index: -1;
           @include trans(opacity);
+          left: 0;
+          opacity: 0;
+          position: absolute;
+          top: 97px;
+          visibility: hidden;
+          width: 400px;
+          z-index: -1;
         }
       }
     }
@@ -164,84 +174,88 @@
 }
 
 .services {
-  padding-top: 85px;
   margin-top: 73px;
+  padding-top: 85px;
   
   &__text {
+    box-sizing: border-box;
     margin-top: 28px;
     max-width: 910px;
     padding-left: $compensation-text;
-    box-sizing: border-box;
   }
+
   &__text-narrow {
     max-width: 850px;
   }
 }
 
 .technologies {
-  padding-top: 85px;
   margin-top: 30px;
+  padding-top: 85px;
   
   &__logo {
-    margin-top: 61px;
     margin-bottom: 45px;
+    margin-top: 61px;
     max-width: 922px;
     overflow: hidden;
     
     &-line {
-      position: relative;
       display: block;
-      width: 100%;
-      padding: 0;
       overflow: hidden;
+      padding: 0;
+      position: relative;
+      width: 100%;
       
       & + & {
         margin-top: 27px;
       }
       
-      &:before {
-        content: "";
+      &::before {
+        content: '';
         display: block;
         padding-top: 10%;
       }
     }
     
     &-line-wrapper {
+      border: 0;
+      bottom: 0;
+      display: flex;
+      height: 100%;
+      justify-content: space-between;
+      left: 0;
+      padding-left: $compensation-text;
       position: absolute;
       top: 0;
-      bottom: 0;
-      left: 0;
       width: 100%;
-      height: 100%;
-      border: 0;
-      display: flex;
-      justify-content: space-between;
-      padding-left: $compensation-text;
     }
+
     &-item {
       height: 100%;
     }
   }
+
   &__text {
-    padding-left: $compensation-text;
-    margin-top: 24px;
-    margin-bottom: 0;
-    max-width: 940px;
     box-sizing: border-box;
+    margin-bottom: 0;
+    margin-top: 24px;
+    max-width: 940px;
+    padding-left: $compensation-text;
   }
   
   &__illustration {
-    margin-top: 85px;
     margin-left: -5px;
+    margin-top: 85px;
   }
+
   &__second-title {
     font-family: $accent-font-family;
-    margin-top: 24px;
-    margin-left: $compensation-accent-text;
-    margin-bottom: 0;
     font-size: 72px;
     font-weight: 400;
     letter-spacing: -0.432px;
+    margin-bottom: 0;
+    margin-left: $compensation-accent-text;
+    margin-top: 24px;
   }
 }
 
@@ -258,113 +272,121 @@
   }
   
   &__text {
-    padding-left: $compensation-text;
-    margin-top: 27px;
     box-sizing: border-box;
+    margin-top: 27px;
+    padding-left: $compensation-text;
   }
 }
 
 .footer {
-  padding-top: 85px;
-  margin-top: 76px;
   display: block;
+  margin-top: 76px;
   overflow: hidden;
+  padding-top: 85px;
+
   &__wrapper {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
     max-width: 1184px;
-    width: 100%;
     padding-left: 128px;
     padding-right: 128px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    box-sizing: border-box;
+    width: 100%;
   }
   
   &__title {
+    @extend %section__title;
     width: 100%;
-    @extend .section__title;
   }
   
   &__text {
-    max-width: 475px;
-    font-weight: 400;
     font-family: $accent-font-family;
     font-size: 62px;
-    line-height: 106%;
+    font-weight: 400;
     letter-spacing: -0.372px;
-    margin-top: 39px;
+    line-height: 106%;
     margin-right: 24px;
+    margin-top: 39px;
+    max-width: 475px;
   }
+
   &__email {
     margin-top: 29px;
   }
+
   &__email-link {
     color: $accent-color;
     text-decoration: none;
   }
+
   &__address {
-    max-width: 360px;
-    font-size: 36px;
-    line-height: 122%;
-    letter-spacing: -0.216px;
-    margin-top: 38px;
+    align-items: flex-start;
     box-sizing: border-box;
     display: flex;
-    align-items: flex-start;
     flex-direction: column;
+    font-size: 36px;
+    letter-spacing: -0.216px;
+    line-height: 122%;
+    margin-top: 38px;
+    max-width: 360px;
     
     &-street {
       white-space: nowrap;
     }
   }
+
   &__phone {
-    text-decoration: none;
-    margin-bottom: 11px;
-    display: inline-block;
     color: $main-color;
+    display: inline-block;
+    margin-bottom: 11px;
+    text-decoration: none;
   }
   
   &__copyright {
+    height: 0;
     position: relative;
     width: 100%;
-    height: 0;
+
     &-text {
+      bottom: 21px;
       position: absolute;
       right: 21px;
-      bottom: 21px;
       transform: rotate(-90deg);
       transform-origin: 100% 100%;
     }
   }
   
   &__instagram {
-    padding-top: 85px;
-    margin-top: 46px;
     font-size: 28px;
-    line-height: 157%;
-    text-align: center;
     letter-spacing: -0.168px;
+    line-height: 157%;
+    margin-top: 46px;
+    padding-top: 85px;
+    text-align: center;
+
     &-title {
-      margin: 0;
-      font-weight: 300;
       font-size: 28px;
+      font-weight: 300;
       line-height: 157%;
+      margin: 0;
     }
+
     &-link {
-      display: inline-flex;
-      margin-top: 3px;
-      margin-right: 8px;
-      text-decoration: none;
-      justify-content: center;
       align-items: center;
+      display: inline-flex;
+      justify-content: center;
+      margin-right: 8px;
+      margin-top: 3px;
+      text-decoration: none;
       
       .link {
         font-weight: 400;
         
-        &:after {
-          height: 3px;
+        &::after {
           bottom: -2px;
+          height: 3px;
         }
       }
       
@@ -378,32 +400,32 @@
       }
       
       &:hover .link {
-        @extend .link:hover;
+        @extend %link:hover;
       }
     }
     
     &-wrapper {
-      position: relative;
       display: inline-block;
+      position: relative;
       
-      &:before {
+      &::before {
+        background: url('../images/arrow-left.svg') center no-repeat;
         content: '';
-        width: 151px;
         height: 78px;
         position: absolute;
-        background: url(../images/arrow-left.svg) center no-repeat;
         right: calc(100% + 5px);
         top: 66px;
+        width: 151px;
       }
       
-      &:after {
+      &::after {
+        background: url('../images/arrow-right.svg') center no-repeat;
         content: '';
-        width: 144px;
         height: 77px;
-        position: absolute;
-        background: url(../images/arrow-right.svg) center no-repeat;
         left: calc(100% - 8px);
+        position: absolute;
         top: 66px;
+        width: 144px;
       }
     }
   }
@@ -411,62 +433,72 @@
 
 
 @media screen and (max-width: 1279px) {
-  
   .about {
+    &__lithuania-img {
+      width: 40px;
+    }
+
     &__slider {
-      &-dots-item:after {
-        width: 3px;
+      &-dots-item::after {
         height: 3px;
+        width: 3px;
       }
+
       &-image-wrapper {
-        width: 350px;
         top: 70px;
+        width: 350px;
       }
     }
+
     &__illustration {
       margin-left: 0;
       margin-right: 0;
+      margin-top: 45px;
     }
+
     &__strong-text {
       font-size: 60px;
-      line-height: 68px;
       letter-spacing: -0.36px;
+      line-height: 68px;
       margin-top: 27px;
     }
   }
-  .technologies__illustration,
-  .about__illustration {
-    margin-top: 45px;
-  }
-  
-  .section__title, .footer__title {
-    font-size: 72px;
-    line-height: 60px;
-  }
-  
-  .section__text {
-    letter-spacing: -0.168px;
-    & + & {
-      margin-top: 19px;
+
+  .section {
+    &__title {
+      font-size: 72px;
+      line-height: 60px;
+    }
+
+    &__text {
+      letter-spacing: -0.168px;
+
+      & + & {
+        margin-top: 19px;
+      }
     }
   }
   
   .services {
-    padding-top: 75px;
     margin-top: -20px;
-  }
-  
-  .services__text {
-    margin-top: 13px;
-    padding-left: 0;
+    padding-top: 75px;
+
+    &__text {
+      margin-top: 13px;
+      padding-left: 0;
+    }
   }
   
   .technologies {
-    margin-top: 0px;
-    
+    margin-top: 0;
+
+    &__illustration {
+      margin-top: 45px;
+    }
+
     &__logo {
-      margin-top: 50px;
-      margin-bottom: 35px;    
+      margin-bottom: 35px;
+      margin-top: 50px;    
     }
     
     &__second-title {
@@ -484,36 +516,42 @@
   
   .footer {
     margin-top: 0;
+
     &__wrapper {
       padding-left: 128px;
       padding-right: 128px;
     }
+
+    &__title {
+      font-size: 72px;
+      line-height: 60px;
+    }
+
     &__text {
       font-size: 54px;
     }
+
     &__address {
-      max-width: 100%;
       font-size: 32px;
+      max-width: 100%;
     }
+
     &__address-street {
       white-space: initial;
     }
+
     &__instagram {
       font-size: 24px;
+
       &-title {
         font-size: 24px;
       }
     }
   }
-  
-  .about__lithuania-img {
-    width: 40px;
-  }
 }
 
 @media screen and (max-width: 1023px) {
-  
-  .link:after {
+  .link::after {
     bottom: 2px;
     height: 3px;
   }
@@ -522,32 +560,39 @@
   .section {
     &__title {
       font-size: 52px;
-      line-height: 60px;
       letter-spacing: -0.312px;
+      line-height: 60px;
     }
     
     &__text {
       letter-spacing: -0.144px;
     }
   }
+
   .about {
     &__slider {
       &-image-wrapper {
-        width: 300px;
         top: 50px;
+        width: 300px;
       }
     }
+
     &__lithuania-img {
-      width: 37px;
       height: 42px;
       margin-right: 10px;
+      width: 37px;
     }
+
     &__strong-text {
-      margin-top: 23px;
       font-size: 46px;
-      line-height: 54px;
       letter-spacing: -0.276px;
+      line-height: 54px;
       margin-left: 0;
+      margin-top: 23px;
+    }
+
+    &__illustration {
+      margin-top: 30px;
     }
   }
   
@@ -562,15 +607,25 @@
   .technologies {
     margin-top: -20px;
     
+    &__illustration {
+      margin-top: 30px;
+    }
+
     &__logo {
-      margin-top: 40px;
       margin-bottom: 25px;
+      margin-top: 40px;
+
+      &-line-wrapper {
+        padding-left: 0;
+      }
+
       &-line {
         & + & {
           margin-top: 17px;
         }
       }
     }
+
     &__second-title {
       font-size: 42px;
     }
@@ -583,45 +638,42 @@
       margin-top: 15px;
     }
   }
-  
-  .technologies__illustration, .about__illustration {
-    margin-top: 30px;
-  }
-  
-  
-  .technologies__logo-line-wrapper {
-    padding-left: 0;
-  }
-  
+
   .footer {
     &__wrapper {
       padding-left: 90px;
       padding-right: 90px;
     }
+
     &__text {
       font-size: 40px;
     }
+
     &__email {
       margin-top: 18px;
     }
+
     &__address {
       font-size: 28px;
     }
     
     &__instagram {
-      margin-top: 0;
       font-size: 20px;
+      margin-top: 0;
+
       &-title {
         font-size: 20px;
       }
       
-      &-wrapper:before {
+      &-wrapper::before {
         top: 50px;
       }
-      &-wrapper:after {
+
+      &-wrapper::after {
         top: 50px;
       }
     }
+
     &__copyright-text {
       bottom: 6px;
       right: 19px;
@@ -632,18 +684,19 @@
 
 @media screen and (max-width: 767px) {
   .link {
-    &:after {
-      height: 2px;
+    &::after {
       bottom: 1px;
+      height: 2px;
     }
   }
   
   .section {
     &__title {
       font-size: 48px;
-      line-height: 1;
       letter-spacing: -0.288px;
+      line-height: 1;
     }
+
     &__text {
       letter-spacing: -0.12px;
       
@@ -657,25 +710,29 @@
     padding-top: 10px;
     
     &__lithuania-img {
-      width: 30px;
       height: 34px;
       margin-right: 5px;
+      width: 30px;
     }
+
     &__illustration {
       margin-top: 40px;
     }
+
     &__slider {
       font-weight: 300;
+
       &-wrapper {
         display: none;
       }
     }
+
     &__strong-text {
-      margin-top: 20px;
       font-size: 36px;
-      line-height: 43px;
       letter-spacing: -0.216px;
+      line-height: 43px;
       margin-left: 0;
+      margin-top: 20px;
       
       &--color {
         display: inline;
@@ -698,8 +755,8 @@
     padding-top: 30px;
     
     &__logo {
-      margin-top: 14px;
       margin-bottom: 16px;
+      margin-top: 14px;
     }
     
     &__logo-line {
@@ -712,9 +769,11 @@
       &--react {
         order: 1;
       }
+
       &--js {
         order: 2;
       }
+
       &--django {
         order: 3;
       }
@@ -729,9 +788,9 @@
     }
     
     &__text {
+      margin-top: 4px;
       padding-left: 0;
       padding-right: 10px;
-      margin-top: 4px;
       
       & + & {
         margin-top: 11px;
@@ -743,11 +802,11 @@
     }
     
     &__second-title {
-      margin-top: 37px;
       font-size: 32px;
-      line-height: 1;
       letter-spacing: -0.168px;
+      line-height: 1;
       margin-left: -2px;
+      margin-top: 37px;
     }
   }
   
@@ -755,9 +814,9 @@
     margin-top: 40px;
     
     &__title {
-      margin-top: 0px;
-      padding-top: 30px;
       margin-left: -2px;
+      margin-top: 0;
+      padding-top: 30px;
     }
     
     &__text {
@@ -774,76 +833,81 @@
       padding-left: 70px;
       padding-right: 70px;
     }
+
     &__title {
       margin-left: -2px;
     }
     
     &__text {
       font-size: 24px;
-      line-height: 31px;
       letter-spacing: -0.144px;
+      line-height: 31px;
       margin-top: 5px;
       max-width: 100%;
     }
     
     &__email {
-      margin-top: 7px;
       line-height: 29px;
+      margin-top: 7px;
     }
     
     &__address {
-      margin-top: 18px;
       font-size: 20px;
-      line-height: 28px;
       letter-spacing: -0.12px;
+      line-height: 28px;
+      margin-top: 18px;
     }
+
     &__copyright-text {
-      right: 17px;
       bottom: 3px;
+      right: 17px;
       transform: rotate(-90deg) translateX(100%);
     }
+
     &__instagram {
-      margin-top: 41px;
-      text-align: right;
       font-size: 20px;
-      line-height: 1;
       letter-spacing: -0.12px;
+      line-height: 1;
+      margin-top: 41px;
       overflow: hidden;
       padding-top: 30px;
+      text-align: right;
       
       &-title {
         font-size: 20px;
-        line-height: 1;
         letter-spacing: -0.12px;
+        line-height: 1;
       }
+
       &-wrapper {
         padding-right: 24px;
         
-        &:before {
-          width: 74px;
-          height: 39px;
+        &::before {
           background-size: cover;
-          transform: rotate(-30deg);
-          top: 80px;
+          height: 39px;
           left: -24px;
           right: auto;
+          top: 80px;
+          transform: rotate(-30deg);
+          width: 74px;
         }
-        &:after {
-          width: 73px;
-          height: 39px;
+
+        &::after {
           background-size: cover;
+          height: 39px;
           left: auto;
-          top: 79px;
           right: 18px;
+          top: 79px;
           transform: rotate(20deg);
+          width: 73px;
         }
       }
       
       &-link {
-        margin-top: 8px;
         margin-right: 4px;
+        margin-top: 8px;
         
-        .link:after {
+        .link::after {
           bottom: -5px;
           height: 2px;
           left: 2px;
@@ -852,29 +916,29 @@
       }
       
       .instagram-icon {
+        height: 18px;
         margin-right: 5px;
         margin-top: 3px;
         width: 18px;
-        height: 18px;
       }
     }
   }
   
   .instagram {
-    margin-top: 100px;
     margin-left: -8px;
     margin-right: -8px;
+    margin-top: 100px;
     
     &__slider {
       height: 113px;
     }
     
     &__wrapper {
-      &:after {
-        width: 3350px;
-        height: 103px;
+      &::after {
         background-size: cover;
+        height: 103px;
         left: -22px;
+        width: 3350px;
       }
     }
     
@@ -899,6 +963,7 @@
       font-size: 38px;
       letter-spacing: -0.228px;
     }
+
     &__text {
       letter-spacing: -0.108px;
     }
@@ -908,16 +973,17 @@
     padding-top: 13px;
     
     &__lithuania-img {
-      width: 22px;
       height: 25px;
       margin-top: 0;
+      width: 22px;
     }
+
     &__strong-text {
-      margin-top: 28px;
       font-size: 32px;
-      line-height: 119%;
       letter-spacing: -0.192px;
+      line-height: 119%;
       margin-left: 0;
+      margin-top: 28px;
       
       &--color {
         display: inline;
@@ -930,8 +996,8 @@
     padding-top: 30px;
     
     &__text {
-      margin-top: 6px;
       margin-right: -12px;
+      margin-top: 6px;
     }
   }
   
@@ -941,9 +1007,10 @@
       margin-right: 0;
       margin-top: 42px;
     }
+
     &__second-title {
-      margin-top: 12px;
       font-size: 28px;
+      margin-top: 12px;
     }
   }
   
@@ -954,6 +1021,7 @@
       margin-left: 0;
       margin-right: 0;
     }
+
     &__title {
       padding-top: 28px;
     }
@@ -964,42 +1032,46 @@
       padding-left: 24px;
       padding-right: 24px;
     }
+
     &__title {
       margin-left: -2px;
     }
     
     &__text {
       font-size: 24px;
-      line-height: 31px;
       letter-spacing: -0.144px;
+      line-height: 31px;
       margin-top: 5px;
       max-width: 100%;
     }
     
     &__email {
-      margin-top: 7px;
       line-height: 29px;
+      margin-top: 7px;
     }
     
     &__address {
-      margin-top: 18px;
       font-size: 20px;
-      line-height: 28px;
       letter-spacing: -0.12px;
+      line-height: 28px;
+      margin-top: 18px;
+
       &-country {
         margin-bottom: 15px;
       }
+
       &-illustration {
-        width: 88px;
-        height: 42px;
         border-width: 2px;
+        height: 42px;
         margin-left: 0;
         margin-top: 0;
+        width: 88px;
       }
     }
+
     &__copyright-text {
-      right: 12px;
       bottom: 20px;
+      right: 12px;
       transform: rotate(-90deg) translateX(100%);
     }
     
