@@ -74,6 +74,30 @@ html {
   }
 }
 
+@-webkit-keyframes mobile-arrow {
+  0% {
+    transform: translate(0%, -50%);
+  }
+  50% {
+    transform: translate(20px, -50%);
+  }
+  100% {
+    transform: translate(0%, -50%);
+  }
+}
+
+@keyframes mobile-arrow {
+  0% {
+    transform: translate(0%, -50%);
+  }
+  50% {
+    transform: translate(20px, -50%);
+  }
+  100% {
+    transform: translate(0%, -50%);
+  }
+}
+
 @-webkit-keyframes opacity {
   0% {
     opacity: 0;
@@ -601,6 +625,10 @@ html {
     height: 77px;
     position: relative;
     text-decoration: none;
+  }
+  .mobile-menu__link:hover::before {
+    -webkit-animation: mobile-arrow .5s ease-in;
+            animation: mobile-arrow .5s ease-in;
   }
   .mobile-menu__link::before {
     background-position: center right;

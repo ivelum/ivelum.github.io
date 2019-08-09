@@ -83,6 +83,20 @@ html {
   }
 }
 
+@keyframes mobile-arrow {
+  0% {
+    transform: translate(0%, -50%);
+  }
+
+  50% {
+    transform: translate(20px, -50%);
+  }
+
+  100% {
+    transform: translate(0%, -50%);
+  }
+}
+
 @keyframes opacity {
   0% {
     opacity: 0;
@@ -678,6 +692,10 @@ html {
       height: 77px;
       position: relative;
       text-decoration: none;
+
+      &:hover::before {
+        animation: mobile-arrow .5s ease-in;
+      }
       
       &::before {
         background-position: center right;
