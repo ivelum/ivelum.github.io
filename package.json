@@ -5,7 +5,7 @@
   "scripts": {
     "clean": "rimraf css/",
     "clean:all.css": "npx rimraf css/all.css",
-    "postcss": "postcss css/*.css --replace --no-map --use autoprefixer",
+    "postcss": "postcss css/*.css --replace --no-map --use autoprefixer postcss-discard-comments",
     "scss": "node-sass --output-style expanded --source-map true scss -o css/",
     "scss:watch": "node-sass --output-style expanded --watch --source-map true scss -o css/",
     "scss:build": "node-sass --output-style expanded scss -o css/",
@@ -28,6 +28,7 @@
     "live-server": "^1.2.1",
     "node-sass": "^4.12.0",
     "postcss-cli": "^6.1.3",
+    "postcss-discard-comments": "^4.0.2",
     "rimraf": "^2.6.3",
     "stylelint": "^10.1.0",
     "stylelint-config-sass-guidelines": "^6.0.0",
