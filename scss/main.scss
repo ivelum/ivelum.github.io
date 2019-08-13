@@ -728,6 +728,10 @@
     &__slider {
       font-weight: 300;
 
+      &:hover {
+        color: inherit;
+      }
+
       &-wrapper {
         display: none;
       }

@@ -48,29 +48,29 @@ html{
 
 @-webkit-keyframes line{
   0%{
-    stroke-dashoffset:50000;
-    stroke-width:5;
+    stroke-dashoffset:40000px;
+    stroke-width:4px;
   }
-  30%{
-    stroke-width:40;
+  10%{
+    stroke-width:5px;
   }
   100%{
-    stroke-dashoffset:0;
-    stroke-width:60;
+    stroke-dashoffset:0px;
+    stroke-width:80px;
   }
 }
 
 @keyframes line{
   0%{
-    stroke-dashoffset:50000;
-    stroke-width:5;
+    stroke-dashoffset:40000px;
+    stroke-width:4px;
   }
-  30%{
-    stroke-width:40;
+  10%{
+    stroke-width:5px;
   }
   100%{
-    stroke-dashoffset:0;
-    stroke-width:60;
+    stroke-dashoffset:0px;
+    stroke-width:80px;
   }
 }
 
@@ -421,7 +421,7 @@ html{
   .toggle-menu__icon{
     display:flex;
     flex-direction:column;
-    height:30px;
+    height:28px;
     justify-content:space-between;
     margin:auto;
     transform:skew(-15deg);
@@ -443,10 +443,10 @@ html{
     height:4px;
     width:100%;
   }
-  .toggle-menu:hover::before{
+  .toggle-menu:hover::before, .toggle-menu.active::before{
     background-color:#ff5a00;
   }
-  .toggle-menu:hover .toggle-menu__icon::before, .toggle-menu:hover .toggle-menu__icon::after{
+  .toggle-menu:hover .toggle-menu__icon::before, .toggle-menu:hover .toggle-menu__icon::after, .toggle-menu.active .toggle-menu__icon::before, .toggle-menu.active .toggle-menu__icon::after{
     background-color:#ff5a00;
   }
   .toggle-menu.active{
@@ -467,21 +467,46 @@ html{
   .modal.show{
     display:block;
   }
+  .modal.show .modal__bg-line{
+    -webkit-animation:line 3.5s ease-in forwards .15s;
+            animation:line 3.5s ease-in forwards .15s;
+  }
   .modal.show .modal__wrapper::before{
-    -webkit-animation:opacity 0.7s ease-in forwards;
-            animation:opacity 0.7s ease-in forwards;
+    -webkit-animation:opacity 0.7s ease-in forwards 3.5s;
+            animation:opacity 0.7s ease-in forwards 3.5s;
   }
   .modal.show .modal__logo, .modal.show .modal__header::after{
-    -webkit-animation:opacity 1s ease-in forwards 0.5s;
-            animation:opacity 1s ease-in forwards 0.5s;
+    -webkit-animation:opacity 1s ease-in forwards 2.5s;
+            animation:opacity 1s ease-in forwards 2.5s;
   }
   .modal.show .modal__toggle{
-    -webkit-animation:opacity 1s ease-in forwards 1s;
-            animation:opacity 1s ease-in forwards 1s;
+    -webkit-animation:opacity 1s ease-in forwards 3s;
+            animation:opacity 1s ease-in forwards 3s;
   }
   .modal.show .modal__body, .modal.show .modal__instagram{
-    -webkit-animation:opacity 1s ease-in forwards 1s;
-            animation:opacity 1s ease-in forwards 1s;
+    -webkit-animation:opacity 1s ease-in forwards 3.5s;
+            animation:opacity 1s ease-in forwards 3.5s;
+  }
+  .modal__bg{
+    position:absolute;
+    left:0;
+    top:0;
+    bottom:0;
+    right:0;
+    z-index:-1;
+    overflow:hidden;
+  }
+  .modal__bg svg{
+    position:absolute;
+    width:870px;
+    height:1334px;
+    top:-8px;
+    right:-14px;
+  }
+  .modal__bg-line{
+    stroke-width:4px;
+    stroke-dasharray:40000px;
+    stroke-dashoffset:40000px;
   }
   .modal__wrapper{
     box-sizing:border-box;
@@ -716,6 +741,10 @@ html{
     left:-27px;
     width:3350px;
   }
+  .modal__bg svg{
+    top:-25px;
+    right:-8px;
+  }
 }
 
 @media screen and (max-width: 599px){
@@ -770,6 +799,12 @@ html{
     letter-spacing:-0.06px;
     line-height:30px;
     width:120px;
+  }
+  .modal__bg svg{
+    width:600px;
+    height:920px;
+    top:-13px;
+    right:-9px;
   }
 }
 
