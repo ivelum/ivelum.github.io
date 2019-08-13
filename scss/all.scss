@@ -77,11 +77,6 @@ html {
     stroke-width: 5px;
   }
 
-  60% {
-    stroke-dashoffset: 30000px;
-    stroke-width: 30px;
-  }
-
   100% {
     /* stylelint-disable length-zero-no-unit */
     stroke-dashoffset: 0px; /* for animation in edge */
@@ -550,7 +545,7 @@ html {
         /* stylelint-disable max-nesting-depth */
         @supports (animation-name: mobile-line-bg) {
           &__bg-line {
-            animation: mobile-line-bg 1.5s ease-in forwards 0.15s;
+            animation: mobile-line-bg 1.5s linear forwards 0.15s;
           }
 
           &__wrapper {
