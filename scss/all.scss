@@ -67,7 +67,7 @@ html {
   display: none;
 }
 
-@keyframes line {
+@keyframes mobile-line-bg {
   0% {
     stroke-dashoffset: 40000px;
     stroke-width: 4px;
@@ -77,9 +77,28 @@ html {
     stroke-width: 5px;
   }
 
+  60% {
+    stroke-dashoffset: 30000px;
+    stroke-width: 30px;
+  }
+
   100% {
-    stroke-dashoffset: 0px;
+    /* stylelint-disable length-zero-no-unit */
+    stroke-dashoffset: 0px; /* for animation in edge */
+    /* stylelint-enable length-zero-no-unit */
     stroke-width: 80px;
+  }
+}
+
+@keyframes mobile-wrapper-menu {
+  99% {
+    max-height: 100%;
+    overflow-y: hidden;
+  }
+
+  100% {
+    max-height: 1000px;
+    overflow-y: auto;
   }
 }
 
@@ -500,52 +519,89 @@ html {
 
     &.show {
       display: block;
-      
+
       .modal {
-        &__bg-line {
-          animation: line 3.5s ease-in forwards .15s;
+        .modal__bg {
+          display: none;
         }
+
+        &__wrapper {
+          height: auto;
+          overflow-y: auto;
+        }
+
         &__wrapper::before {
-          animation: opacity 0.7s ease-in forwards 3.5s;
+          animation: opacity 0.7s ease-in forwards 0.2s;
         }
 
         &__logo,
         &__header::after {
-          animation: opacity 1s ease-in forwards 2.5s;
+          animation: opacity 1s ease-in forwards 0.5s;
         }
-        
+
         &__toggle {
-          animation: opacity 1s ease-in forwards 3s;
+          animation: opacity 1s ease-in forwards 0.6s;
         }
 
         &__body,
         &__instagram {
-          animation: opacity 1s ease-in forwards 3.5s;
+          animation: opacity 1s ease-in forwards 0.75s;
         }
+        /* stylelint-disable max-nesting-depth */
+        @supports (animation-name: mobile-line-bg) {
+          &__bg-line {
+            animation: mobile-line-bg 1.5s ease-in forwards 0.15s;
+          }
+
+          &__wrapper {
+            animation: mobile-wrapper-menu 0.1s ease-in forwards 1.5s;
+            max-height: 100%;
+            overflow-y: hidden;
+
+            &::before {
+              animation: opacity 0.7s ease-in forwards 1.5s;
+            }
+          }
+
+          &__logo,
+          &__header::after {
+            animation: opacity 1s ease-in forwards 1s;
+          }
+          
+          &__toggle {
+            animation: opacity 1s ease-in forwards 1.5s;
+          }
+
+          &__body,
+          &__instagram {
+            animation: opacity 1s ease-in forwards 1.75s;
+          }
+        }
+        /* stylelint-enable max-nesting-depth */
       }
     }
 
     &__bg {
-      position: absolute;
-      left: 0;
-      top: 0;
       bottom: 0;
-      right: 0;
-      z-index: -1;
+      left: 0;
       overflow: hidden;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
 
       svg {
-          position: absolute;
-          width: 870px;
-          height: 1334px;
-          top: -8px;
-          right: -14px;
+        height: 1334px;
+        position: absolute;
+        right: -14px;
+        top: -8px;
+        width: 870px;
       }
 
       &-line {
-          stroke-width: 4px;
-          stroke-dasharray: 40000px;
-          stroke-dashoffset: 40000px;
+        stroke-dasharray: 40000px;
+        stroke-dashoffset: 40000px;
+        stroke-width: 4px;
       }
     }
 
@@ -832,8 +888,8 @@ html {
   }
 
   .modal__bg svg {
-    top: -25px;
     right: -8px;
+    top: -25px;
   }
 }
 
@@ -907,9 +963,9 @@ html {
   }
 
   .modal__bg svg {
-    width: 600px;
     height: 920px;
-    top: -13px;
     right: -9px;
+    top: -13px;
+    width: 600px;
   }
 }
