@@ -36,13 +36,13 @@
   }
 }
 
-.page-404-copyright {
+.page-404__copyright {
   height: 0;
   margin-top: auto;
   position: relative;
   width: 100%;
   
-  &__text {
+  &-text {
     bottom: 16px;
     left: calc(100% - 21px);
     position: absolute;
@@ -72,8 +72,8 @@
 }
 
 @media screen and (max-width: 1023px) {
-  .page-404-copyright {
-    &__text {
+  .page-404__copyright {
+    &-text {
       bottom: -10px;
       left: 100%;
     }
@@ -147,10 +147,10 @@
     }
   }
   
-  .page-404-copyright {
+  .page-404__copyright {
     height: auto;
 
-    &__text {
+    &-text {
       bottom: 0;
       left: 0;
       margin-left: auto;

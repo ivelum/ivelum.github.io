@@ -173,18 +173,16 @@ html {
       }
     }
     
-    .nav {
-      &__link {
-        font-size: 14px;
-        line-height: 60px;
-        
-        &:not(&--instagram) {
-          margin-left: 25px;
-        }
+    .nav__link {
+      font-size: 14px;
+      line-height: 60px;
 
-        &--instagram {
-          margin-left: 4px;
-        }
+      &:not(&--instagram) {
+        margin-left: 25px;
+      }
+
+      &--instagram {
+        margin-left: 4px;
       }
     }
   }
@@ -474,12 +472,10 @@ html {
         background-color: $accent-color;
       }
       
-      .toggle-menu {
-        &__icon {
-          &::before,
-          &::after {
-            background-color: $accent-color; 
-          }
+      .toggle-menu__icon {
+        &::before,
+        &::after {
+          background-color: $accent-color;
         }
       }
     }
@@ -635,10 +631,12 @@ html {
           margin-left: 8px;
           margin-right: 8px;
 
+          /* stylelint-disable max-nesting-depth */
           &.swiper-slide,
           &-img {
             width: 128px;
           }
+          /* stylelint-enable max-nesting-depth */
         }
       }
 
@@ -694,7 +692,7 @@ html {
       text-decoration: none;
 
       &:hover::before {
-        animation: mobile-arrow .5s ease-in;
+        animation: mobile-arrow 0.5s ease-in;
       }
       
       &::before {

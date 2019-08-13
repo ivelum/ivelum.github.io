@@ -92,6 +92,7 @@
     }
   }
 
+  /* stylelint-disable max-nesting-depth */
   @media (hover) , (min-width:0\0) {
     &__slider {
       @include trans(color);
@@ -122,7 +123,7 @@
         height: 100%;
         position: relative;
         width: calc(100%/11);
-        
+
         &:hover {
           + .about {
             &__slider-image-wrapper {
@@ -138,7 +139,7 @@
             width: 6px;
           }
         }
-        
+
         &::after {
           @include trans(all);
           background-color: $accent-color;
@@ -170,6 +171,7 @@
       }
     }
   }
+  /* stylelint-enable max-nesting-depth */
 }
 
 .services {
@@ -333,6 +335,7 @@
     margin-top: 38px;
     max-width: 360px;
     width: 100%;
+
     &-street {
       white-space: nowrap;
     }
@@ -381,7 +384,8 @@
       margin-right: 8px;
       margin-top: 3px;
       text-decoration: none;
-      
+
+      /* stylelint-disable max-nesting-depth */
       .link {
         font-weight: 400;
         
@@ -390,7 +394,8 @@
           height: 3px;
         }
       }
-      
+      /* stylelint-enable max-nesting-depth */
+
       .instagram-icon {
         margin-right: 9px;
         margin-top: 4px;
