@@ -4,6 +4,13 @@
     "max-nesting-depth": [3],
     "selector-max-compound-selectors": [4],
     "selector-no-qualifying-type": true,
-    "function-parentheses-space-inside": "never-single-line"
+    "function-parentheses-space-inside": "never-single-line",
+    "selector-class-pattern": [
+      "^([a-zA-Z0-9^]+[-]?[a-zA-Z0-9^]+)((?:--|__)([a-zA-Z0-9^]+[-]?[a-zA-Z0-9^]+))*$",
+      {
+        "message":
+          "Selector should be written in BEM-style"
+      }
+    ]
   }
 }
