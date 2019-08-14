@@ -651,6 +651,12 @@
       padding-right: 90px;
     }
 
+    &__title {
+      font-size: 52px;
+      letter-spacing: -0.312px;
+      line-height: 60px;
+    }
+
     &__text {
       font-size: 40px;
     }
@@ -846,6 +852,9 @@
 
     &__title {
       margin-left: -2px;
+      font-size: 48px;
+      letter-spacing: -0.288px;
+      line-height: 1;
     }
     
     &__text {
@@ -1044,7 +1053,8 @@
     }
 
     &__title {
-      margin-left: -2px;
+      font-size: 38px;
+      letter-spacing: -0.228px;
     }
     
     &__text {
