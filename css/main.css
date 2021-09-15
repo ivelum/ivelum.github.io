@@ -553,11 +553,11 @@ html{
     z-index:-1;
   }
   .modal__bg svg{
-    height:1334px;
+    height:1502px;
     position:absolute;
     right:-14px;
     top:-8px;
-    width:870px;
+    width:980px;
   }
   .modal__bg-line{
     stroke-dasharray:40000px;
@@ -1131,9 +1131,8 @@ html{
 }
 
 .careers__illustration{
-  position:absolute;
-  right:-70px;
-  top:-50px;
+  float:right;
+  margin:20px -110px 0 20px;
 }
 
 .careers__title{
@@ -1145,10 +1144,6 @@ html{
   box-sizing:border-box;
   margin-top:27px;
   padding-left:3px;
-}
-
-.careers__vacancies{
-  padding-right:150px;
 }
 
 .footer{
@@ -1367,12 +1362,8 @@ html{
     margin-top:55px;
   }
   .careers__illustration{
+    margin-right:-30px;
     max-width:220px;
-    right:-10px;
-    top:10px;
-  }
-  .careers__vacancies{
-    padding-right:250px;
   }
   .footer{
     margin-top:0;
@@ -1470,15 +1461,10 @@ html{
     margin-top:35px;
   }
   .careers__illustration{
-    max-width:200px;
-    right:-50px;
-    top:-10px;
+    max-width:180px;
   }
   .careers__text{
     margin-top:15px;
-  }
-  .careers__vacancies{
-    padding-right:130px;
   }
   .footer__wrapper{
     padding-left:90px;
@@ -1632,9 +1618,8 @@ html{
     margin-top:40px;
   }
   .careers__illustration{
-    max-width:130px;
-    right:-50px;
-    top:-20px;
+    margin-top:0;
+    max-width:150px;
   }
   .careers__title{
     margin-left:-2px;
@@ -1644,9 +1629,6 @@ html{
   .careers__text{
     margin-top:8px;
     padding-left:0;
-  }
-  .careers__vacancies{
-    padding-right:80px;
   }
   .footer{
     margin-top:33px;
@@ -1822,9 +1804,6 @@ html{
   }
   .careers__title{
     padding-top:28px;
-  }
-  .careers__vacancies{
-    padding-right:0;
   }
   .footer__wrapper{
     padding-left:24px;

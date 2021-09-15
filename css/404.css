@@ -553,11 +553,11 @@ html{
     z-index:-1;
   }
   .modal__bg svg{
-    height:1334px;
+    height:1502px;
     position:absolute;
     right:-14px;
     top:-8px;
-    width:870px;
+    width:980px;
   }
   .modal__bg-line{
     stroke-dasharray:40000px;

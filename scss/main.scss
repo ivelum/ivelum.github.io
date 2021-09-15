@@ -283,9 +283,8 @@
   position: relative;
 
   &__illustration {
-    position: absolute;
-    right: -70px;
-    top: -50px;
+    float: right;
+    margin: 20px -110px 0 20px;
   }
 
   &__title {
@@ -297,10 +296,6 @@
     box-sizing: border-box;
     margin-top: 27px;
     padding-left: $compensation-text;
-  }
-
-  &__vacancies {
-    padding-right: 150px;
   }
 }
 
@@ -549,13 +544,8 @@
     margin-top: 55px;
 
     &__illustration {
+      margin-right: -30px;
       max-width: 220px;
-      right: -10px;
-      top: 10px;
-    }
-
-    &__vacancies {
-      padding-right: 250px;
     }
   }
   
@@ -688,18 +678,13 @@
     margin-top: 35px;
 
     &__illustration {
-      max-width: 200px;
-      right: -50px;
-      top: -10px;
+      max-width: 180px;
     }
 
     &__text {
       margin-top: 15px;
     }
 
-    &__vacancies {
-      padding-right: 130px;
-    }
   }
 
   .footer {
@@ -902,9 +887,8 @@
     margin-top: 40px;
 
     &__illustration {
-      max-width: 130px;
-      right: -50px;
-      top: -20px;
+      margin-top: 0;
+      max-width: 150px;
     }
 
     &__title {
@@ -918,9 +902,6 @@
       padding-left: 0;
     }
 
-    &__vacancies {
-      padding-right: 80px;
-    }
   }
   
   .footer {
@@ -1139,9 +1120,6 @@
       padding-top: 28px;
     }
 
-    &__vacancies {
-      padding-right: 0;
-    }
   }
   
   .footer {
