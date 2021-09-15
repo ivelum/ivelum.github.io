@@ -27,10 +27,12 @@ var modalCloseButton = document.getElementById('closeModal');
 modalOpenButton.addEventListener("click", function (e) {
   modal.classList.add('show');
   modalOpenButton.classList.add('active');
+  scrollLock.disablePageScroll(modal);
 });
 modalCloseButton.addEventListener("click", function (e) {
   modal.classList.remove('show');
   modalOpenButton.classList.remove('active');
+  scrollLock.enablePageScroll(modal);
 });
 
 var mobileAnchors = [].slice.call(document.querySelectorAll('.modal-close-link'));
@@ -38,6 +40,7 @@ mobileAnchors.forEach(function (item) {
   item.addEventListener("click", function (e) {
     modal.classList.remove('show');
     modalOpenButton.classList.remove('active');
+    scrollLock.enablePageScroll(modal);
   });
 });
 
@@ -45,6 +48,7 @@ document.addEventListener('keyup', function (event) {
   if (event.keyCode === 27) {
     modal.classList.remove('show');
     modalOpenButton.classList.remove('active');
+    scrollLock.enablePageScroll(modal);
   }
 });
 
